@@ -1,15 +1,14 @@
+// Function to check if values are of the same type
 function isSameType(value1, value2) {
-  //your js code here
-	if (isNaN(value1) && isNaN(value2)) {
+    if ((isNaN(value1) && isNaN(value2)) && typeof (value1) === typeof(value2)) {
         return true;
     }
-
-    // Check if the types of both values are the same
-    return typeof value1 === typeof value2 
+    return false;
 }
 
-// do not change the code below.
+// User input using prompts
 let value1 = prompt("Enter Start of the Range.");
 let value2 = prompt("Enter End Of the Range.");
 
+// Check if values are of the same type and display the result
 alert(isSameType(value1, value2));
