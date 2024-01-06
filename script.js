@@ -1,10 +1,11 @@
 // Function to check if values are of the same type
 function isSameType(value1, value2) {
-    if ((isNaN(value1) && isNaN(value2)) 
-		|| (typeof(value1) === typeof(value2))) {
-        return true;
-    }
-    return false;
+    if (isNaN(value1) && isNaN(value2)) {
+    return true;
+  }
+
+  // Check if the types are the same
+  return typeof value1 === typeof value2;
 }
 
 // User input using prompts
